@@ -29,11 +29,11 @@ A complete face recognition–based attendance and behavior analysis system buil
 
 ### 1. 📥 Install Python Requirements
 
-bash
+
 pip install -r requirements.txt
 (Install all Python dependencies.)
 
-2. 🛠 Preparing the Dataset
+## 2. 🛠 Preparing the Dataset
 Create a folder called newdata/ inside the model/ directory.
 
 Inside newdata/, create subfolders named after each person.
@@ -51,66 +51,57 @@ newdata/
 ├── Alice/
 │    ├── img1.jpg
 │    ├── img2.jpg
-3. 🏗 Model Embedding Creation
+
+## 3. 🏗 Model Embedding Creation
 Run inside model/:
 
-bash
-Copy
-Edit
 python new_emmbedding.py
+
 ✅ This will generate the .pkl file for face embeddings.
 
-4. 🎯 Starting the Model Prediction Server
+## 4. 🎯 Starting the Model Prediction Server
 Inside model/:
 
-bash
-Copy
-Edit
 python app.py
 recognizer.py will load models and dataset.
 
 Face prediction will use YOLO + face_recognition.
 
-5. 🖥 Running the Go Backend
+## 5. 🖥 Running the Go Backend
 Inside backend-go/:
 
 Configure your MongoDB URI inside main.go.
 
 Then run:
 
-bash
-Copy
-Edit
 go run main.go
 ✅ The backend Go server connects to MongoDB to manage students, attendance, behavior data.
 
-6. 📬 Configuring Frontend Python App
+## 6. 📬 Configuring Frontend Python App
 Inside frontend_python/:
 
 Update your admin email and password settings.
 
 Then run:
 
-bash
-Copy
-Edit
 python app.py
-✅ This frontend dashboard will:
 
-Receive face prediction data via TCP from model
+# ✅ This frontend dashboard will:
 
-Manage login, view attendance, add/update students
+# Receive face prediction data via TCP from model
 
-Send alert mails when day scholars or blacklisted students enter
+# Manage login, view attendance, add/update students
 
-Behavior analysis using Groq API (only attendance data)
+# Send alert mails when day scholars or blacklisted students enter
 
-🔥 How the System Works
+# Behavior analysis using Groq API (only attendance data)
+
+## 🔥 How the System Works
 model/app.py predicts faces live from camera using YOLO + face_recognition.
 
 Prediction data is sent via TCP to frontend_python/app.py.
 
-Frontend dashboard (admin login) can:
+#  Frontend dashboard (admin login) can:
 
 ✅ Log Attendance (In/Out/Nil)
 
@@ -120,7 +111,8 @@ Frontend dashboard (admin login) can:
 
 ✅ Run Behavior Analysis (questions to Groq based on attendance only)
 
-📊 Dashboard Features
+#  📊 Dashboard Features
+
 Admin Login
 
 Student Management (Add/View/Update)
@@ -131,20 +123,18 @@ Behavior Analysis (Smart Chatbot for student behavior)
 
 Email Notifications (Blacklist/Day Scholar)
 
-📈 Future Improvements
+## 📈 Future Improvements
 📸 Multiple camera streams
 
 📋 Advanced attendance reports
 
 🛡️ Security hardening for production deployment
 
-🙌 Contributing
+## 🙌 Contributing
 PRs are welcome. Open issues if you find bugs!
 
-⚡ Quick Start Commands
-bash
-Copy
-Edit
+## ⚡ Quick Start Commands
+
 # 1. Setup Python
 pip install -r requirements.txt
 
@@ -157,6 +147,8 @@ python model/new_emmbedding.py
 go run backend-go/main.go
 python frontend_python/app.py
 python model/app.py
-🛡 License
+
+
+## 🛡 License
 MIT License - feel free to use, modify and share!
 
