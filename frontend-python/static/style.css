@@ -1,0 +1,137 @@
+/* Reset */
+body, h1, h2, h3, p, table, input, button, form {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Body Background */
+  body {
+    background: #f5f8fb;
+    color: #333;
+    padding: 2rem;
+  }
+  
+  /* General Headings */
+  h2, h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+  }
+  
+  /* Forms */
+  form {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"],
+  form input[type="checkbox"],
+  form button {
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"] {
+    width: 200px;
+  }
+  
+  form button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    transition: background-color 0.2s;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  table th, table td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #eaeaea;
+    text-align: left;
+  }
+  
+  table th {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    font-weight: 600;
+  }
+  
+  table td input[type="text"] {
+    width: 100%;
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  table form {
+    display: inline;
+  }
+  
+  /* Button Variants */
+  button[type="submit"] {
+    margin-top: 0.2rem;
+    margin-right: 0.2rem;
+  }
+  
+  form button.delete {
+    background-color: #e74c3c;
+  }
+  
+  form button.delete:hover {
+    background-color: #c0392b;
+  }
+  
+  form button.mark {
+    background-color: #2ecc71;
+  }
+  
+  form button.mark:hover {
+    background-color: #27ae60;
+  }
+  
+  /* Alerts */
+  p.error {
+    color: #e74c3c;
+    font-weight: bold;
+  }
+  
+  /* Navbar */
+  a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Container layout */
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  

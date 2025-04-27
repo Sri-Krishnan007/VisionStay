@@ -1,0 +1,53 @@
+body {
+    background: linear-gradient(to bottom right, #eef2f7, #ffffff);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  h2 {
+    font-weight: bold;
+  }
+  
+  .card {
+    border-radius: 1rem;
+  }
+  
+  .table th, .table td {
+    vertical-align: middle;
+    text-align: center;
+  }
+  
+  .badge-IN {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+  }
+  
+  .badge-OUT {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+  }
+  
+  .badge-NIL {
+    background-color: #ffc107;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 20px;
+  }
+  
+  .btn-outline-primary, .btn-outline-success {
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-weight: bold;
+  }
+  
+  .table {
+    border-radius: 1rem;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  

@@ -1,0 +1,29 @@
+body {
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+/* Cards for Features */
+.action-card {
+    background: #ffffff;
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.action-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Student Behaviour Section */
+.card {
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Navbar tweaks */
+.navbar {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}

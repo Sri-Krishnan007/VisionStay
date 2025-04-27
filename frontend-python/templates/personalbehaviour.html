@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Behaviour Analysis</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='personalbehaviour.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🧠 Student Behaviour Report</h1>
+    <h2>{{ student.name }} ({{ student.rollno }})</h2>
+    <p>📚 Class: {{ student.class }} | 🏨 Hosteller: {{ 'Yes' if student.is_hosteller else 'No' }}</p>
+
+    <div class="question-list">
+      <h3>📋 Common Questions:</h3>
+      <div id="questions">
+        <!-- Questions will be populated here -->
+      </div>
+    </div>
+
+    <div class="query-section">
+      <label for="query">🔎 Ask something about attendance:</label>
+      <textarea id="query" rows="3" placeholder="Click a question or type here..."></textarea>
+      <button id="askBtn">Ask Bot</button>
+    </div>
+
+    <div class="chatbox" id="responseBox">
+      <span>🤖 Bot will reply here...</span>
+    </div>
+  </div>
+
+  <script>
+    const studentRollNo = "{{ student.roll_no }}";
+  </script>
+  <script src="{{ url_for('static', filename='personalbehaviour.js') }}"></script>
+</body>
+</html>

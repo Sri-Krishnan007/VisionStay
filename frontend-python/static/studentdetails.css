@@ -1,0 +1,41 @@
+body {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Active tab highlight */
+.btn-group .btn.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Tabs Section */
+.tab-section {
+    display: none;
+}
+.active-tab {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Card Styling */
+.card {
+    border-radius: 20px;
+    background: white;
+}
+
+/* Table Tweaks */
+.table th, .table td {
+    vertical-align: middle;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

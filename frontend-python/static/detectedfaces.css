@@ -1,0 +1,38 @@
+body {
+    background: linear-gradient(135deg, #c8e8f9, #f9d3ec);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .card {
+    border-radius: 1rem;
+    background: white;
+  }
+  
+  h2 {
+    font-weight: bold;
+  }
+  
+  .table {
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  
+  .table th, .table td {
+    vertical-align: middle;
+  }
+  
+  .badge {
+    font-size: 1rem;
+    padding: 0.6em 1em;
+  }
+  
+  .btn-light {
+    font-weight: bold;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  

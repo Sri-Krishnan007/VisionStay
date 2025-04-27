@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VisionStay Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+
+<body>
+
+<!-- Top Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">VisionStay Dashboard</span>
+    <div class="d-flex align-items-center">
+      <span class="text-white me-3">Welcome, {{ session['user'] }}</span>
+      <a href="/logout" class="btn btn-outline-light">Logout</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Content Area -->
+<div class="container my-5">
+
+  <!-- Quick Actions -->
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card action-card text-center">
+        <div class="card-body">
+          <h5 class="card-title">📚 Student Details</h5>
+          <button onclick="navigateTo('/student-details')" class="btn btn-primary mt-3 w-100">Go</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card action-card text-center">
+        <div class="card-body">
+          <h5 class="card-title">🧠 Detected Faces Log</h5>
+          <button onclick="navigateTo('/detectedfaces')" class="btn btn-primary mt-3 w-100">Go</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card action-card text-center">
+        <div class="card-body">
+          <h5 class="card-title">🕒 Attendance Logs</h5>
+          <button onclick="navigateTo('/attendance')" class="btn btn-primary mt-3 w-100">Go</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Student Behaviour Lookup -->
+  <div class="card mt-5">
+    <div class="card-header text-center">
+      📋 Student Behaviour Lookup
+    </div>
+    <div class="card-body">
+      <form id="behaviourForm" onsubmit="return goToStudentPage();">
+        <div class="row g-2">
+          <div class="col-md-9">
+            <select id="rollDropdown" class="form-select" required>
+              <option value="">-- Select Roll No --</option>
+              {% for student in students %}
+                <option value="{{ student.roll_no }}">{{ student.name }} ({{ student.roll_no }})</option>
+              {% endfor %}
+            </select>  
+          </div>
+          <div class="col-md-3">
+            <button type="submit" class="btn btn-success w-100">View Behaviour</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+
+</body>
+</html>

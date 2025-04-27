@@ -1,0 +1,89 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #e0f7fa, #e1bee7);
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .container {
+    background: #ffffff;
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #5e35b1;
+  }
+  
+  h2, p {
+    text-align: center;
+    color: #333;
+  }
+  
+  .question-list {
+    margin-top: 20px;
+  }
+  
+  #questions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .question {
+    background: #7e57c2;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 14px;
+  }
+  
+  .question:hover {
+    background: #5e35b1;
+  }
+  
+  .query-section {
+    margin-top: 30px;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: none;
+  }
+  
+  #askBtn {
+    background: #3949ab;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  #askBtn:hover {
+    background: #283593;
+  }
+  
+  .chatbox {
+    background: #ede7f6;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 12px;
+    min-height: 100px;
+    white-space: pre-wrap;
+    font-size: 15px;
+  }
+  
