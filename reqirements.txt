@@ -1,0 +1,11 @@
+Flask
+requests
+python-dateutil
+numpy
+opencv-python
+face-recognition
+ultralytics
+dlib
+matplotlib
+torch
+tqdm
